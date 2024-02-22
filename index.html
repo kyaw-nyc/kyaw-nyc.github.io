@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyaw Naing - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-2xl font-bold">Kyaw Naing</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gray-900 text-white h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="text-center z-10 relative">
+            <h1 class="text-4xl font-bold mb-4">Hello, I'm Kyaw Naing</h1>
+        </div>
+
+        <!-- Interactive Element -->
+        <div id="interactiveElement" class="absolute top-0 left-0 w-full h-full opacity-50 bg-gradient-to-br from-green-500 via-blue-500 to-indigo-500"></div>
+    </header>
+
+    <!-- JavaScript for Interactive Effect -->
+    <script>
+        const interactiveElement = document.getElementById('interactiveElement');
+
+        // Add mousemove event listener to create interactive effect
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const { left, top, width, height } = interactiveElement.getBoundingClientRect();
+
+            const x = (clientX - left) / width * 100;
+            const y = (clientY - top) / height * 100;
+
+            // Update background gradient position based on mouse position
+            interactiveElement.style.background = `radial-gradient(at ${x}% ${y}%, transparent, rgba(0,0,0,0.9))`;
+        });
+    </script>
+
+    <!-- About Section -->
+    <section class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">About Me</h2>
+            <p class="text-gray-700">
+                I am a high school student at William Cullen Bryant High School, expected to graduate in June 2024.
+                Currently, I maintain a GPA of 4.0/4.0 and serve as the Class of 2024 Valedictorian Candidate.
+                In my spare time, I am passionate about web development and have gained experience through various internships and extracurricular activities.
+            </p>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Education</h2>
+            <p>
+                <strong>William Cullen Bryant High School, Long Island City, NY</strong><br>
+                <em>Sept. 2021 – Present</em><br>
+                Expected Graduation: June 2024; GPA: 4.0/4.0 unweighted; Class of 2024 Valedictorian Candidate<br>
+                Relevant Coursework: AP Computer Science Principles (5), Advanced Graphic Design, Yearbook
+            </p>
+            <p>
+                <strong><br>Princeton University, Princeton, NJ</strong><br>
+                <em>Intended Start Date: Aug. 2024</em><br>
+                Class of 2028; Awarded Full-ride scholarship through Questbridge National College Match<br>
+                Intended Major: Bachelor of Science and Engineering In Computer Science
+            </p>
+        </div>
+    </section>
+    <!-- Work Experience Section -->
+    <section class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Work Experience</h2>
+
+            <!-- Intern, Tech Incubator (TIQC), Queens College -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Intern, Tech Incubator (TIQC), Queens College</h3>
+                <p class="text-gray-700">Dec. 2023 – Present</p>
+                <ul class="list-disc pl-6">
+                    <li>Collaborate using WordPress to deliver websites for various businesses partnered with TIQC.</li>
+                    <li>Design flyers and social media posts using Canva and Adobe software.</li>
+                    <li>Collaborate on programming projects using HTML, CSS, and React framework with peers.</li>
+                </ul>
+            </div>
+
+            <!-- IT Assistant, William Cullen Bryant High School -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">IT Assistant, William Cullen Bryant High School</h3>
+                <p class="text-gray-700">Sept. 2023 – Present</p>
+                <ul class="list-disc pl-6">
+                    <li>Assist faculty members and students with their electronic devices in Technology Department.</li>
+                    <li>Aid in managing the school network; connect Department of Education laptops to the school servers.</li>
+                </ul>
+            </div>
+
+            <!-- Web Designer Intern, Earth Club by @THUGGJuice -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Web Designer Intern, Earth Club by @THUGGJuice, New York, NY</h3>
+                <p class="text-gray-700">June – July 2023</p>
+                <ul class="list-disc pl-6">
+                    <li>Helped design a website for Earth Club, a juice company, using WordPress and Figma.</li>
+                    <li>Collaborated with the creative team in designing the menu for their new restaurant called the Earth Club.</li>
+                    <li>Attended team meetings at One World Trade Center; volunteered at events to teach children about technology.</li>
+                </ul>
+            </div>
+
+            <!-- Programming Coach Intern, The Coder School -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Programming Coach Intern, The Coder School, Bayside, NY</h3>
+                <p class="text-gray-700">Dec. 2022 – April 2023</p>
+                <ul class="list-disc pl-6">
+                    <li>Instructed and guided students aged 7 to 16 in programming languages such as Python, JavaScript, and Scratch.</li>
+                    <li>Collaborated closely with fellow coaches to design and implement tailored lesson plans.</li>
+                </ul>
+            </div>
+
+            <!-- Intern, Office of NY State Assembly Member Phara Souffrant Forrest -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Intern, Office of NY State Assembly Member Phara Souffrant Forrest, Brooklyn, NY</h3>
+                <p class="text-gray-700">July – Aug. 2022</p>
+                <ul class="list-disc pl-6">
+                    <li>Collaborated with the creative team to design visually compelling flyers for events and engaging social media posts.</li>
+                    <li>Utilized software tools such as Airtable to efficiently organize and manage constituents' data, ensuring streamlined communication and effective follow-up.</li>
+                </ul>
+            </div>
+
+            <!-- Web Designer Intern, The Epic, Bronx, NY, Remote -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Web Designer Intern, The Epic, Bronx, NY, Remote</h3>
+                <p class="text-gray-700">Feb. – March 2022</p>
+                <ul class="list-disc pl-6">
+                    <li>Worked directly with company founder, Lonna Dawson, to bring her vision of communication agency to life.</li>
+                    <li>Aided in the construction of the website for The Epic, using cloud-based web development services, such as Wix.</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Extracurricular Activities Section -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Extracurricular Activities</h2>
+
+            <!-- Member, NYC Human Rights Commision (YES Council) -->
+            <div class="mb-6">
+                <h3 class="text-xl font-bold">Member, NYC Human Rights Commision (YES Council)</h3>
+                <p class="text-gray-700">Sept. 2023 – Present</p>
+                <ul class="list-disc pl-6">
+                    <li>Spoke and presented homelessness at the United Nations.</li>
+                    <li>Contributed to addressing and promoting human rights issues in New York City through advising the Commission, participating in workshops, providing feedback, and planning youth-related events.</li>
+                </ul>
+            </div>
+
+        <!-- Cofounder, Coding Club -->
+        <div class="mb-6">
+            <h3 class="text-xl font-bold">Cofounder, Coding Club</h3>
+            <p class="text-gray-700">Sept. 2023 – Present</p>
+            <ul class="list-disc pl-6">
+                <li>Teach peers different coding languages after school.</li>
+                <li>Guide students in using 3D design tools and software for their projects.</li>
+            </ul>
+        </div>
+
+        <!-- Third Year Member, National Honor Society -->
+        <div class="mb-6">
+            <h3 class="text-xl font-bold">Third Year Member, National Honor Society</h3>
+            <p class="text-gray-700">Sept. 2021 – Present</p>
+            <ul class="list-disc pl-6">
+                <li>Design flyers for various non-profit organizations and school clubs, such as Key Club.</li>
+                <li>Collaborated and organized events, such as Career Day for the student population.</li>
+            </ul>
+        </div>
+
+        <!-- Secretary and Graphic Designer, Student Government Association -->
+        <div class="mb-6">
+            <h3 class="text-xl font-bold">Secretary and Graphic Designer, Student Government Association</h3>
+            <p class="text-gray-700">Sept. 2022 – Sept. 2023</p>
+            <ul class="list-disc pl-6">
+                <li>Actively contribute to community service fundraising events, such as the annual NYC Breast Cancer Walk.</li>
+                <li>Designing posters using Canva and Adobe software for events, such as school spirit weeks and talent shows.</li>
+            </ul>
+        </div>
+
+        <!-- College Prep Scholar, Questbridge -->
+        <div class="mb-6">
+            <h3 class="text-xl font-bold">College Prep Scholar, Questbridge</h3>
+            <p class="text-gray-700">Dec. 2022 – March 2023</p>
+            <ul class="list-disc pl-6">
+                <li>One of 3,518 students selected as a junior national scholar from a large pool of over 15,000 applicants for 2023.</li>
+                <li>Engaged in monthly virtual workshops and mentorship sessions with Questbridge alumni and admissions officers.</li>
+            </ul>
+        </div>
+
+        
+        </div>
+    </section>
+
+
+    <!-- Skills and Interests Section -->
+    <section class="py-16">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">Skills and Interests</h2>
+            <p>
+                <strong>Programming Languages:</strong> JavaScript, Python, C#, Scratch<br>
+                <strong>Skills:</strong> Proficient in Adobe software, Unity, VMware; adept in creative pursuits; excellent time management and organizational abilities<br>
+                <strong>Hobbies:</strong> Running, volunteering, programming with Linux, assembling desktop computers
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2024 Kyaw Naing. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
